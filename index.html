@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Uta Kik</title>
+  <style>
+    :root {
+      --bg: #f5f3ee;
+      --panel: #fbfaf7;
+      --text: #1a1a1a;
+      --muted: #6b6b6b;
+      --line: #d8d2c8;
+      --hover: #efe9de;
+      --max: 1120px;
+      --radius: 18px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .wrap {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 28px 20px 80px;
+    }
+
+    .site-header {
+      padding: 28px 0 40px;
+      border-bottom: 1px solid var(--line);
+      margin-bottom: 44px;
+    }
+
+    .site-title {
+      margin: 0 0 10px;
+      font-size: clamp(2rem, 3.8vw, 4rem);
+      line-height: 1.05;
+      letter-spacing: -0.03em;
+      font-weight: 600;
+    }
+
+    .site-intro {
+      max-width: 760px;
+      margin: 0;
+      color: var(--muted);
+      font-size: 1rem;
+    }
+
+    .meta-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 18px;
+    }
+
+    .meta-links a {
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 8px 14px;
+      font-size: 0.92rem;
+      background: var(--panel);
+    }
+
+    .section {
+      margin-top: 52px;
+    }
+
+    .section-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      gap: 16px;
+      margin-bottom: 18px;
+    }
+
+    .section-title {
+      margin: 0;
+      font-size: 1.4rem;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+    }
+
+    .section-note {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .card {
+      display: block;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      overflow: hidden;
+      transition: transform 0.15s ease, background 0.15s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-2px);
+      background: var(--hover);
+    }
+
+    .thumb {
+      aspect-ratio: 4 / 3;
+      width: 100%;
+      display: block;
+      object-fit: cover;
+      background: #e5dfd4;
+    }
+
+    .card-body {
+      padding: 14px 14px 16px;
+    }
+
+    .card-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+
+    .platform {
+      display: inline-block;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 4px 9px;
+      font-size: 0.75rem;
+      color: var(--muted);
+      background: rgba(255, 255, 255, 0.55);
+    }
+
+    .state {
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+
+    .card-title {
+      margin: 0 0 8px;
+      font-size: 1rem;
+      line-height: 1.35;
+      font-weight: 600;
+    }
+
+    .card-text {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.92rem;
+      line-height: 1.55;
+    }
+
+    .footer {
+      margin-top: 64px;
+      padding-top: 18px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 900px) {
+      .grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 640px) {
+      .wrap {
+        padding: 20px 14px 56px;
+      }
+
+      .site-header {
+        padding: 18px 0 30px;
+        margin-bottom: 32px;
+      }
+
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+      .section {
+        margin-top: 40px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="site-header">
+      <h1 class="site-title">Uta Kik</h1>
+      <p class="site-intro">
+        Human sensing, spatial observation, design, and moving-image based practices.
+        This page is a simple front door for selected works and current media.
+      </p>
+
+      <div class="meta-links">
+        <a href="https://www.instagram.com/utakik/" target="_blank" rel="noopener noreferrer">Instagram</a>
+        <a href="#" target="_blank" rel="noopener noreferrer">YouTube</a>
+        <a href="#" target="_blank" rel="noopener noreferrer">Vimeo</a>
+        <a href="https://github.com/utakik" target="_blank" rel="noopener noreferrer">GitHub</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="section" aria-labelledby="featured-title">
+        <div class="section-head">
+          <div>
+            <h2 id="featured-title" class="section-title">Featured</h2>
+            <p class="section-note">固定で見せたいもの。</p>
+          </div>
+        </div>
+
+        <div class="grid">
+          <a class="card" href="https://www.instagram.com/utakik/" target="_blank" rel="noopener noreferrer">
+            <img
+              class="thumb"
+              src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=1200&q=80"
+              alt="Featured placeholder 1"
+            />
+            <div class="card-body">
+              <div class="card-top">
+                <span class="platform">Instagram</span>
+                <span class="state">Fixed</span>
+              </div>
+              <h3 class="card-title">Featured post title</h3>
+              <p class="card-text">
+                過去投稿から固定で見せたい内容をここに入れる。
+              </p>
+            </div>
+          </a>
+
+          <a class="card" href="#" target="_blank" rel="noopener noreferrer">
+            <img
+              class="thumb"
+              src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1200&q=80"
+              alt="Featured placeholder 2"
+            />
+            <div class="card-body">
+              <div class="card-top">
+                <span class="platform">YouTube</span>
+                <span class="state">Fixed</span>
+              </div>
+              <h3 class="card-title">Featured video title</h3>
+              <p class="card-text">
+                YouTube の代表作が入る想定の枠。
+              </p>
+            </div>
+          </a>
+
+          <a class="card" href="#" target="_blank" rel="noopener noreferrer">
+            <img
+              class="thumb"
+              src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=80"
+              alt="Featured placeholder 3"
+            />
+            <div class="card-body">
+              <div class="card-top">
+                <span class="platform">Vimeo</span>
+                <span class="state">Fixed</span>
+              </div>
+              <h3 class="card-title">Featured archive title</h3>
+              <p class="card-text">
+                Vimeo や別媒体の固定枠。
+              </p>
+            </div>
+          </a>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="latest-title">
+        <div class="section-head">
+          <div>
+            <h2 id="latest-title" class="section-title">Latest</h2>
+            <p class="section-note">最近の更新。ここだけ後で自動化してもいい。</p>
+          </div>
+        </div>
+
+        <div class="grid">
+          <a class="card" href="https://www.instagram.com/utakik/" target="_blank" rel="noopener noreferrer">
+            <img
+              class="thumb"
+              src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=80"
+              alt="Latest placeholder 1"
+            />
+            <div class="card-body">
+              <div class="card-top">
+                <span class="platform">Instagram</span>
+                <span class="state">Latest</span>
+              </div>
+              <h3 class="card-title">Latest post title</h3>
+              <p class="card-text">
+                最新の投稿や近況をここに差し替える。
+              </p>
+            </div>
+          </a>
+
+          <a class="card" href="#" target="_blank" rel="noopener noreferrer">
+            <img
+              class="thumb"
+              src="https://images.unsplash.com/photo-1492724441997-5dc865305da7?auto=format&fit=crop&w=1200&q=80"
+              alt="Latest placeholder 2"
+            />
+            <div class="card-body">
+              <div class="card-top">
+                <span class="platform">YouTube</span>
+                <span class="state">Latest</span>
+              </div>
+              <h3 class="card-title">Latest video slot</h3>
+              <p class="card-text">
+                動画更新用の枠。まだ空でも箱だけ先に持つ。
+              </p>
+            </div>
+          </a>
+
+          <a class="card" href="#" target="_blank" rel="noopener noreferrer">
+            <img
+              class="thumb"
+              src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=1200&q=80"
+              alt="Latest placeholder 3"
+            />
+            <div class="card-body">
+              <div class="card-top">
+                <span class="platform">Vimeo</span>
+                <span class="state">Latest</span>
+              </div>
+              <h3 class="card-title">Latest archive slot</h3>
+              <p class="card-text">
+                将来の追加媒体用の余白。
+              </p>
+            </div>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      Manual curation first. Automation later.
+    </footer>
+  </div>
+</body>
+</html>
